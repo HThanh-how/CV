@@ -1,4 +1,4 @@
-# 📄 Nguyen Luong Huu Huy - Resume
+# 📄 Pham Huy Thanh - Resume
 
 <div align="center">
 
@@ -28,14 +28,17 @@
 ## 📁 Repository Structure
 
 ```
-NLHH/
-├── main.tex                    # Main LaTeX source file
+CV/
+├── main.tex                    # Main LaTeX source file (imports other files)
+├── preamble.tex                # Packages, settings, commands, and environments
+├── header.tex                  # Personal information header (name, contact)
+├── content.tex                 # Resume content sections
 ├── .github/
 │   └── workflows/
 │       ├── latex.yml          # GitHub Actions workflow configuration
 │       └── README.md          # Workflow documentation
 ├── README.md                   # This file
-└── Nguyen_Luong_Huu_Huy_Resume.pdf  # Generated PDF (after build)
+└── Pham_Huy_Thanh_Resume.pdf  # Generated PDF (after build)
 ```
 
 ## 🚀 Quick Start
@@ -58,7 +61,7 @@ Before building locally, ensure you have:
   - `enumitem` - List customization
   - `hyperref` - Hyperlinks
   - `paracol` - Multi-column layout
-  - And more (see `main.tex` for complete list)
+  - And more (see `preamble.tex` for complete list)
 
 ### Building Locally
 
@@ -81,7 +84,7 @@ docker run --rm -v "$PWD":/workdir xu-cheng/latex-action:latest \
   latexmk -xelatex -shell-escape main.tex
 ```
 
-**Output**: The compiled PDF will be `main.pdf`, which can be renamed to `Nguyen_Luong_Huu_Huy_Resume.pdf`.
+**Output**: The compiled PDF will be `main.pdf`, which can be renamed to `Pham_Huy_Thanh_Resume.pdf`.
 
 ### Building Multiple Times
 
@@ -124,7 +127,7 @@ Check the latest build status:
 
 ### Updating Personal Information
 
-Edit the header section in `main.tex`:
+Edit the header section in `header.tex`:
 
 ```latex
 \begin{header}
@@ -135,7 +138,7 @@ Edit the header section in `main.tex`:
 
 ### Changing Colors
 
-Modify the primary color in the preamble:
+Modify the primary color in `preamble.tex`:
 
 ```latex
 \definecolor{primaryColor}{RGB}{0, 79, 144}  % Change RGB values
@@ -143,7 +146,7 @@ Modify the primary color in the preamble:
 
 ### Adjusting Spacing
 
-Modify the `highlights` environment:
+Modify the `highlights` environment in `preamble.tex`:
 
 ```latex
 \newenvironment{highlights}{
@@ -157,7 +160,7 @@ Modify the `highlights` environment:
 
 ### Adding Sections
 
-Follow the existing section structure:
+Add new sections in `content.tex` following the existing structure:
 
 ```latex
 \section{SECTION NAME}
@@ -166,17 +169,22 @@ Follow the existing section structure:
 \end{onecolentry}
 ```
 
+**Note**: The resume is split into modular files for easier management:
+- `main.tex` - Main file that imports all parts
+- `preamble.tex` - All packages, settings, and custom environments
+- `header.tex` - Personal information and contact details
+- `content.tex` - All resume sections (Introduction, Education, Experience, etc.)
+
 ## 📋 Resume Sections
 
-The current resume includes:
+The current resume includes (all in `content.tex`):
 
-- **Objective**: Career goals and interests
-- **Education**: Academic background and coursework
-- **Honors & Awards**: Academic achievements
-- **Certifications**: Professional certifications
-- **Skills**: Technical skills and competencies
-- **Work Experience**: Professional experience and projects
-- **Interests**: Personal interests and hobbies
+- **Introduction**: Career goals and professional summary
+- **Education**: Academic background and degrees
+- **Languages**: Language proficiency
+- **Experience**: Professional work experience and projects
+- **Technical Skills & Interests**: Technical competencies and tools
+- **Achievements**: Awards, scholarships, and recognitions
 
 ## 🛠️ Troubleshooting
 
@@ -237,6 +245,6 @@ This resume template is for personal use. Feel free to fork and customize for yo
 
 **Made with ❤️ using LaTeX**
 
-[⬆ Back to Top](#-nguyen-luong-huu-huy---resume)
+[⬆ Back to Top](#-pham-huy-thanh---resume)
 
 </div>
