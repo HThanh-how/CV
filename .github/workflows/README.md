@@ -25,7 +25,7 @@ The workflow automatically builds a LaTeX resume PDF, uploads artifacts, and cre
    - Compiles `main.tex` using XeLaTeX
    - Installs required packages: `fontawesome5`, `fontspec`, `lm`, `babel-english`
    - Enables shell escape for advanced features
-4. **Publish PDF**: Copies `main.pdf` to `Nguyen_Luong_Huu_Huy_Resume.pdf`
+4. **Publish PDF**: Copies `main.pdf` to `Pham_Huy_Thanh_Resume.pdf`
 5. **Upload Artifact (PDF)**: Uploads PDF as artifact named `resume-pdf`
 6. **Upload Logs**: Uploads compilation logs (always, even on failure)
 
