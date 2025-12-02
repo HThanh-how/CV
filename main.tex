@@ -1,0 +1,316 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using iconsac
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={PHAM HUY THANH's CV},
+    pdfauthor={PHAM HUY THANH},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    % \usepackage[T1]{fontenc} % this breaks sb2nov
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small PHAM HUY THANH - Page \thepage{} of \pageref*{LastPage}}
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\circ$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt  % Standard left margin for highlights
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+% HEADER ENVIRONMENT DEFINITION (Restored closer to original)
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5} % Original linespread
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+\pagestyle{empty} % Thêm dòng này để xóa số trang
+
+\newcommand{\AND}{\unskip
+    \cleaders\copy\ANDbox\hskip\wd\ANDbox
+    \ignorespaces
+}
+\newsavebox\ANDbox
+\sbox\ANDbox{}
+
+\placelastupdatedtext
+% UPDATED HEADER CONTENT (Restored to mostly contact info)
+\begin{header}
+    \textbf{\fontsize{24 pt}{24 pt}\selectfont PHAM HUY THANH}
+    \vspace{0.3cm} % Original vspace after name
+
+    \normalsize
+    % Contact info on one line as per original template structure
+    \mbox{{\color{black}\footnotesize\faPhone*}\hspace*{0.13cm}+84-363367489}%
+    \kern 0.25cm \AND \kern 0.25cm
+    \mbox{{\color{black}\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}\hrefWithoutArrow{mailto:phthanh.dev@gmail.com}{phthanh.dev@gmail.com}}%
+    \kern 0.25cm \AND \kern 0.25cm
+    \mbox{{\color{black}\footnotesize\faGithub}\hspace*{0.13cm}\hrefWithoutArrow{https://github.com/HThanh-how}{github.com/HThanh-how}}%
+    \kern 0.25cm \AND \kern 0.25cm
+    \mbox{{\color{black}\footnotesize\faLinkedinIn}\hspace*{0.13cm}\hrefWithoutArrow{https://linkedin.com/in/phthanhdev}{linkedin.com/in/phthanhdev}}%
+\end{header}
+
+\vspace{0.3 cm}
+
+\section{Introduction}
+\begin{onecolentry}
+    I am a passionate software engineer driven by curiosity, innovation, and a commitment to continuous learning. I thrive in dynamic, high-growth environments where challenges fuel my creativity and problem-solving skills. With a strong foundation in software development, I focus on building scalable, efficient solutions while emphasizing clean code, collaboration, and long-term impact. Adaptable to the ever-evolving tech landscape, I aim to not only deepen my technical expertise but also contribute meaningfully to my team and company, driving innovation and success through a relentless pursuit of excellence.
+\end{onecolentry}
+
+
+\section{Education}
+\begin{twocolentry}{\textit{2019 -- 2023}}
+    \textbf{Ho Chi Minh City University of Technology - Vietnam National University (VNU-HCM)}\\[4pt]
+    \textit{Bachelor of Science in Computer Science}
+\end{twocolentry}
+
+
+\section{Languages}
+\begin{onecolentry}
+    \begin{highlights}
+        \item English, IELTS: 6.0
+    \end{highlights}
+\end{onecolentry}
+
+\section{Experience}
+
+% --- ActsOne ---
+\begin{twocolentry}{\textit{Ho Chi Minh City}} % Removed date range from here, will specify with roles
+    \textbf{ActsOne }
+\end{twocolentry}
+% Role 1: Current Role
+\begin{twocolentry}{\textit{Mar 2025 -- Present}}
+    \textit{Core System Architect \& Team Leader Backend Developer}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Led the design and development of a comprehensive order processing system using Golang, featuring:
+            \begin{itemize}
+                \item Robust API integrations with multiple e-commerce platforms (e.g., Shopee, Lazada, TikTok).
+                \item Advanced retry mechanisms with exponential backoff for resilient external API calls.
+                \item Implemented inventory versioning for accurate stock tracking and conflict resolution.
+                \item Automated data backup strategies and comprehensive invoice generation (PDF).
+            \end{itemize}
+        \item Continued responsibilities from previous role, including system architecture design, CI/CD pipeline management, and ensuring system security and scalability.
+        \item Championed code standardization by integrating automated linting and formatting tools into the CI pipeline, significantly improving code consistency and maintainability.
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.15cm} % Add a small space before the next role
+
+% Role 2: Previous Role
+\begin{twocolentry}{\textit{2024 -- Mar 2025}}
+    \textit{Backend Engineer}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Deployed and managed a Proxmox VE cluster to virtualize company infrastructure, and automated VM provisioning for team members via Ansible, reducing new environment setup time.
+        \item Automated deployment of both standard (k8s) and lightweight (k3s) Kubernetes clusters using Ansible playbooks, managing persistent storage with Longhorn for stateful applications.
+        \item Architected and deployed a company-wide secure network using DrayTek hardware firewalls and a self-hosted Headscale (Tailscale/WireGuard) VPN, establishing a unified zero-trust environment.
+        \item Implemented Authentik as a centralized Identity Provider (IdP) to enforce role-based access control (RBAC) and secure internal services with Single Sign-On (SSO) and MFA.
+            
+        \item Engineered high-frequency order system using Golang cron jobs executing every 5 minutes via:
+            \begin{itemize}
+                \item Platform API integrations (Shopee, Lazada, TikTok)
+                \item Redis caching layer reducing API calls
+                \item Webhook-based architecture for real-time order processing
+                \item Notification system for instant purchase notifications
+                \item Distributed locking mechanism preventing duplicate processing
+            \end{itemize}
+            
+        \item Developed and implemented an API system by Golang from scratch using Swagger via Scalar for documentation:
+            \begin{itemize}
+                \item Created clear and understandable endpoints for users
+                \item Automated documentation updates with changes in the source code
+                \item Set up a testing environment to avoid reliance on Postman or paid services
+            \end{itemize}
+            
+        \item Built API gateway with rate limiting (50 RPM/client) and Redis-backed cache, reducing platform API consumption by 85\% and achieving 15ms average response time for cached requests.
+            
+        \item Implemented CI/CD pipeline with GitHub Actions for build/test workflows and Drone CI for deployment to Kubernetes.
+            
+        \item Configured Cloudflare and NGINX for load balancing and security, implementing DDoS protection and WAF rules to block malicious requests.
+
+        \item Designed a webhook-based cross-platform membership and notification system using Zalo OA and Elastic Email APIs.
+        
+        \item Maintained and optimized the company's WordPress marketing site, implementing security hardening and performance enhancements.
+    \end{highlights}
+\end{onecolentry}
+\vspace{1 cm}
+
+
+% --- Kays.vn (Senior Developer, 2023) ---
+\begin{twocolentry}{\textit{Ho Chi Minh City, 2023}}
+    \textbf{Kays.vn} \\[4pt]
+    \textit{Full-stack Engineer}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Developed Tauri Dashboard for cross-platform for transactions with Rust-based security modules
+        \item Implemented Next.js for product pages, improving SEO ranking
+        \item Orchestrated real-time data sync between Supabase and legacy systems using AWS EventBridge
+        \item Mentored 4 intern. developers in TypeScript best practices and performance optimization techniques
+    \end{highlights}
+\end{onecolentry}
+\vspace{1 cm}
+
+% --- IVS Internship (Website Developer, 2022) ---
+\begin{twocolentry}{\textit{Ho Chi Minh City, 2022}}
+    \textbf{IVS}\\[4pt]
+    \textit{Website Developer}
+\end{twocolentry}
+\vspace{0.1 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Led development of new homepage website focusing on user experience improvements
+        \item Built dynamic frontend using Next.js/React.js with mobile-first responsive design
+        \item Collaborated with backend team to implement SpringBoot APIs for data integration
+        \item Optimized MongoDB/MySQL queries reducing page load times by 15%
+        \item Implemented SSR and lazy loading techniques for faster content delivery
+        \item Established CI/CD pipeline using Jenkins for automated deployments
+    \end{highlights}
+\end{onecolentry}
+
+
+
+\section{Technical Skills \& Interests}
+\begin{onecolentry}
+\begin{highlights}
+    \item \textbf{Programming Languages:} Go, C/C++, Python, JavaScript, Java, Rust
+    \item \textbf{DevOps & Orchestration:} Docker, Kubernetes (k8s, k3s), Ansible, GitHub Actions, Drone CI, Nginx
+    \item \textbf{Virtualization & Networking:} Proxmox VE, DrayTek, Tailscale, Headscale, WireGuard, Longhorn, Cloudflare
+    \item \textbf{Cloud & Storage:} AWS (EC2, S3, EventBridge), Minio, Supabase
+    \item \textbf{Databases:} PostgreSQL, MySQL, MongoDB, Redis, DuckDB
+    \item \textbf{Identity Management:} Authentik (SSO, MFA, RBAC)
+    \item \textbf{Web Technologies:} Next.js, React.js, SpringBoot, WordPress, Tauri, Electron
+    \item \textbf{API Development:} Swagger, Scalar, Postman
+\end{highlights}
+\end{onecolentry}
+
+\section{Achievements}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{Best Solution Award} - ActsOne (2024)
+        \item \textbf{Outstanding Employee} - Kays.vn (2023)
+        \item \textbf{Most Promising Intern Award} - IVS Technology Solutions (2022)
+        \item Top 36 Presentation Contest - University Level (2019)
+        \item Academic Excellence Scholarship - HCMUT (2019, 2022)
+        \item Student Scholarship Project Award (Score: 9.30/10) - HCMUT (2022)
+    \end{highlights}
+\end{onecolentry}
+
+\end{document}
+
