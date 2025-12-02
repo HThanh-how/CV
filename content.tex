@@ -55,41 +55,22 @@
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Built the company infrastructure from ground up, serving as the primary infrastructure architect and operator responsible for all system components from hardware to application layer.
-        \item Deployed and managed a Proxmox VE cluster to virtualize company infrastructure, implementing VM isolation, resource quotas, and automated VM provisioning via Ansible, reducing new environment setup time by 80\%.
-        \item Configured advanced Proxmox features including VM snapshots, live migration, high availability (HA), and storage replication for disaster recovery.
-        \item Designed and implemented VLAN architecture for network segmentation, enabling secure multi-tenant infrastructure and improved network performance.
-        \item Automated deployment of both standard (k8s) and lightweight (k3s) Kubernetes clusters using Ansible playbooks, managing persistent storage with Longhorn for stateful applications.
-        \item Architected and deployed a company-wide secure network using DrayTek hardware firewalls and a self-hosted Headscale (Tailscale/WireGuard) VPN, establishing a unified zero-trust environment.
-        \item Implemented Authentik as a centralized Identity Provider (IdP) to enforce role-based access control (RBAC) and secure internal services with Single Sign-On (SSO) and MFA.
-        \item Established automated backup and recovery procedures for VMs, databases, and application data, ensuring business continuity and compliance.
-        \item Optimized infrastructure performance through load balancing, caching strategies, and resource monitoring, improving system throughput by 50\%.
-            
-        \item Engineered high-frequency order system using Golang cron jobs executing every 5 minutes via:
-            \begin{itemize}
-                \item Platform API integrations (Shopee, Lazada, TikTok)
-                \item Redis caching layer reducing API calls
-                \item Webhook-based architecture for real-time order processing
-                \item Notification system for instant purchase notifications
-                \item Distributed locking mechanism preventing duplicate processing
-            \end{itemize}
-            
-        \item Developed and implemented an API system by Golang from scratch using Swagger via Scalar for documentation:
-            \begin{itemize}
-                \item Created clear and understandable endpoints for users
-                \item Automated documentation updates with changes in the source code
-                \item Set up a testing environment to avoid reliance on Postman or paid services
-            \end{itemize}
-            
-        \item Built API gateway with rate limiting (50 RPM/client) and Redis-backed cache, reducing platform API consumption by 85\% and achieving 15ms average response time for cached requests.
-            
-        \item Implemented CI/CD pipeline with GitHub Actions for build/test workflows and Drone CI for deployment to Kubernetes.
-            
-        \item Configured Cloudflare and NGINX for load balancing and security, implementing DDoS protection and WAF rules to block malicious requests.
-
-        \item Designed a webhook-based cross-platform membership and notification system using Zalo OA and Elastic Email APIs.
-        
-        \item Maintained and optimized the company's WordPress marketing site, implementing security hardening and performance enhancements.
+        \item Built company infrastructure from ground up (hardware to application layer)
+        \item Proxmox VE cluster: VM isolation, resource quotas, Ansible automation (80\% faster setup)
+        \item Proxmox: VM snapshots, live migration, HA, storage replication
+        \item Network: VLAN architecture, multi-tenant segmentation
+        \item Kubernetes: Automated k8s/k3s deployment via Ansible, Longhorn persistent storage
+        \item Security: DrayTek firewalls, Headscale VPN (Tailscale/WireGuard), zero-trust network
+        \item Identity: Authentik IdP, RBAC, SSO, MFA
+        \item Backup: Automated VM/database backup, disaster recovery
+        \item Performance: Load balancing, caching, monitoring (50\% throughput improvement)
+        \item Order system: Golang cron (5-min intervals), API integrations (Shopee, Lazada, TikTok), Redis caching, webhook architecture, distributed locking
+        \item API system: Golang, Swagger/Scalar documentation, automated updates, testing environment
+        \item API gateway: Rate limiting (50 RPM/client), Redis cache (85\% API reduction, 15ms response)
+        \item CI/CD: GitHub Actions, Drone CI, K8s deployments
+        \item Security: Cloudflare, NGINX, DDoS protection, WAF
+        \item Notifications: Webhook-based system, Zalo OA, Elastic Email
+        \item WordPress: Security hardening, performance optimization
     \end{highlights}
 \end{onecolentry}
 \vspace{1 cm}
