@@ -34,17 +34,13 @@
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Solution Architect: End-to-end platform design and operations
-        \item Backend: gRPC, DDD, supply chain domain, microservices
-        \item Infrastructure: On-prem IDC, Proxmox VE clusters, Kubernetes (k8s/k3s)
-        \item SRE: Disaster recovery, monitoring, HA (99.9\% uptime SLA)
-        \item Database: MySQL/PostgreSQL replication (master-slave, multi-master), automated failover
-        \item Storage: NAS, hot/warm/cold archive tiering (40\% cost reduction)
-        \item Security: Cloudflare ZeroTrust, secure tunnels, DDoS protection, WAF
-        \item CI/CD: GitHub Actions, Drone CI, automated K8s deployments
-        \item Order processing: Golang, gRPC, API integrations, automated workflows
-        \item VM management: Resource allocation, load balancing, capacity planning
-        \item Backup: Automated snapshots, replication, disaster recovery
+        \item \textbf{Order Processing Platform:} Built comprehensive order processing system (Golang, gRPC, DDD) for supply chain domain. Purpose: Handle high-frequency orders from multiple e-commerce platforms (Shopee, Lazada, TikTok) with inventory versioning, automated retry mechanisms, and PDF invoice generation.
+        \item \textbf{On-Prem IDC Infrastructure:} Designed and operate complete infrastructure platform (Proxmox VE, Kubernetes, NAS storage, networking). Purpose: Provide scalable, cost-effective on-premises infrastructure with VM isolation, HA (failover), automated provisioning, and backup-based system restoration.
+        \item \textbf{Storage Tiering System:} Implemented hot/warm/cold archive storage strategy with NAS systems. Purpose: Optimize data lifecycle management, reduce storage costs by 40\%, and ensure efficient data access patterns.
+        \item \textbf{Database Replication Platform:} Configured MySQL/PostgreSQL replication (master-slave, multi-master). Purpose: Ensure high availability, data consistency, and zero-downtime database operations.
+        \item \textbf{Security Infrastructure:} Architected zero-trust security platform (Cloudflare ZeroTrust, secure tunnels, DDoS protection, WAF). Purpose: Protect company infrastructure and applications from threats while enabling secure remote access.
+        \item \textbf{SRE Platform:} Built comprehensive SRE infrastructure (monitoring, HA architecture with failover). Purpose: Achieve 99.9\% uptime SLA, automate incident response, and ensure system reliability.
+        \item \textbf{CI/CD Platform:} Developed automated deployment pipelines (GitHub Actions, Drone CI, Kubernetes). Purpose: Enable rapid, reliable software delivery with automated testing and deployment.
     \end{highlights}
 \end{onecolentry}
 \vspace{0.15cm} % Add a small space before the next role
@@ -55,22 +51,16 @@
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Built company infrastructure from ground up (hardware to application layer)
-        \item Proxmox VE cluster: VM isolation, resource quotas, Ansible automation (80\% faster setup)
-        \item Proxmox: VM snapshots, live migration, HA, storage replication
-        \item Network: VLAN architecture, multi-tenant segmentation
-        \item Kubernetes: Automated k8s/k3s deployment via Ansible, Longhorn persistent storage
-        \item Security: DrayTek firewalls, Headscale VPN (Tailscale/WireGuard), zero-trust network
-        \item Identity: Authentik IdP, RBAC, SSO, MFA
-        \item Backup: Automated VM/database backup, disaster recovery
-        \item Performance: Load balancing, caching, monitoring (50\% throughput improvement)
-        \item Order system: Golang cron (5-min intervals), API integrations (Shopee, Lazada, TikTok), Redis caching, webhook architecture, distributed locking
-        \item API system: Golang, Swagger/Scalar documentation, automated updates, testing environment
-        \item API gateway: Rate limiting (50 RPM/client), Redis cache (85\% API reduction, 15ms response)
-        \item CI/CD: GitHub Actions, Drone CI, K8s deployments
-        \item Security: Cloudflare, NGINX, DDoS protection, WAF
-        \item Notifications: Webhook-based system, Zalo OA, Elastic Email
-        \item WordPress: Security hardening, performance optimization
+        \item \textbf{Proxmox VE Infrastructure:} Built and managed Proxmox VE cluster with VM isolation, snapshots, HA (failover), Ansible automation. Purpose: Virtualize company infrastructure, enable rapid VM provisioning (80\% faster setup), and provide high-availability virtualization platform with automatic failover.
+        \item \textbf{Kubernetes Platform:} Automated deployment of k8s/k3s clusters (Ansible playbooks) with Longhorn persistent storage. Purpose: Enable container orchestration for microservices, manage stateful applications, and provide scalable container platform.
+        \item \textbf{Zero-Trust Network:} Architected company-wide secure network (DrayTek firewalls, Headscale VPN with Tailscale/WireGuard). Purpose: Establish unified zero-trust environment, secure remote access, and protect internal services.
+        \item \textbf{Identity Provider Platform:} Implemented Authentik as centralized IdP (RBAC, SSO, MFA). Purpose: Secure internal services, enforce role-based access control, and provide single sign-on experience.
+        \item \textbf{High-Frequency Order System:} Engineered order processing system (Golang cron, 5-min intervals) with API integrations (Shopee, Lazada, TikTok), Redis caching, webhook architecture, distributed locking. Purpose: Process orders in real-time, reduce API calls, and prevent duplicate processing.
+        \item \textbf{API Platform:} Developed Golang API system with Swagger/Scalar documentation and API gateway. Purpose: Provide clear, documented APIs with rate limiting (50 RPM/client), reduce platform API consumption by 85\%, achieve 15ms response time for cached requests.
+        \item \textbf{Performance Optimization:} Implemented Redis caching, load balancing, and monitoring systems. Purpose: Improve system throughput by 50\%, reduce response times, and optimize resource utilization.
+        \item \textbf{CI/CD Platform:} Built CI/CD pipelines (GitHub Actions, Drone CI) for automated K8s deployments. Purpose: Enable rapid, reliable software delivery with automated testing and infrastructure as code.
+        \item \textbf{Backup \& Restore System:} Established automated backup procedures and restoration capabilities for VMs, databases, and application data. Purpose: Enable system restoration from backups, ensure data protection, and support recovery operations.
+        \item \textbf{Security Platform:} Configured Cloudflare and NGINX for load balancing and security (DDoS protection, WAF). Purpose: Protect applications from attacks, distribute traffic, and block malicious requests.
     \end{highlights}
 \end{onecolentry}
 \vspace{1 cm}
@@ -113,20 +103,19 @@
 \section{Technical Skills \& Interests}
 \begin{onecolentry}
 \begin{highlights}
-    \item \textbf{Programming Languages:} Go, C/C++, Python, JavaScript, Java, Rust
-    \item \textbf{Backend Architecture:} gRPC, Domain-Driven Design (DDD), Microservices, Supply Chain Domain Modeling, API Gateway Design
-    \item \textbf{Platform \& Infrastructure:} On-Premises IDC, Proxmox VE (VM isolation, HA, live migration, snapshots), Kubernetes (k8s, k3s), Colocation, Platform Engineering
-    \item \textbf{System Architecture:} End-to-End System Design, Multi-Layer Architecture, Scalable Platform Design, Infrastructure as Code
-    \item \textbf{Site Reliability Engineering (SRE):} Disaster Recovery, Monitoring \& Alerting, High Availability (HA), SLA Management, Incident Response
-    \item \textbf{Database Management:} MySQL/PostgreSQL Replication (Master-Slave, Multi-Master), Database Tiering, Backup \& Recovery, Data Consistency
-    \item \textbf{Storage Systems:} NAS, Hot/Warm/Cold Archive Storage, Storage Tiering, Data Lifecycle Management, Storage Optimization
-    \item \textbf{Networking \& Security:} Cloudflare ZeroTrust, Secure Tunnels, Load Balancing, VLAN Configuration, DrayTek Firewalls, Network Segmentation, Zero-Trust Architecture
-    \item \textbf{DevOps \& CI/CD:} Docker, Ansible, GitHub Actions, Drone CI, Nginx, Automated Deployment, Infrastructure Automation
-    \item \textbf{Caching \& Performance:} Redis, Application-Level Caching, CDN Configuration, Load Optimization, Response Time Optimization
-    \item \textbf{Databases:} PostgreSQL, MySQL, MongoDB, Redis, DuckDB
-    \item \textbf{Identity Management:} Authentik (SSO, MFA, RBAC), Centralized Authentication
-    \item \textbf{Web Technologies:} Next.js, React.js, SpringBoot, WordPress, Tauri, Electron
-    \item \textbf{API Development:} gRPC, REST APIs, Swagger, Scalar, Postman
+    \item \textbf{Programming:} Go, C/C++, Python, JavaScript, Java, Rust
+    \item \textbf{Backend:} gRPC, Domain-Driven Design (DDD), Microservices, API Gateway
+    \item \textbf{Infrastructure:} On-Prem IDC, Proxmox VE, Kubernetes (k8s/k3s), Colocation, Platform Engineering
+    \item \textbf{Architecture:} End-to-End System Design, Scalable Platforms, Infrastructure as Code
+    \item \textbf{SRE:} Monitoring, High Availability, SLA Management
+    \item \textbf{Database:} MySQL/PostgreSQL (Replication, Master-Slave, Multi-Master), MongoDB, Redis, DuckDB
+    \item \textbf{Storage:} NAS, Hot/Warm/Cold Archive, Storage Tiering, Data Lifecycle Management
+    \item \textbf{Security:} Cloudflare ZeroTrust, Secure Tunnels, DrayTek Firewalls, Zero-Trust Architecture
+    \item \textbf{Networking:} VLAN, Load Balancing, Network Segmentation, VPN (Tailscale/WireGuard)
+    \item \textbf{DevOps:} Docker, Ansible, GitHub Actions, Drone CI, Nginx, CI/CD Pipelines
+    \item \textbf{Identity:} Authentik (SSO, MFA, RBAC)
+    \item \textbf{Web:} Next.js, React.js, SpringBoot, WordPress, Tauri, Electron
+    \item \textbf{APIs:} gRPC, REST, Swagger, Scalar
 \end{highlights}
 \end{onecolentry}
 
