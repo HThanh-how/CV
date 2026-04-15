@@ -1,4 +1,4 @@
-name: Build LaTeX PDF - Resume
+name: Build LaTeX PDF - Resume & Cover Letter
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
           echo "Triggered on $GITHUB_REF@${GITHUB_SHA}"
           ls -la || true
 
-      - name: Compile LaTeX (XeLaTeX)
+      - name: Compile Resume (XeLaTeX)
         uses: xu-cheng/latex-action@v3
         with:
           root_file: main.tex
@@ -31,28 +31,45 @@ jobs:
             tlmgr update --self
             tlmgr install fontawesome5 fontspec lm babel-english
 
-      - name: Publish PDF to project root
-        run: |
-          cp main.pdf Pham_Huy_Thanh_Resume.pdf
-          ls -la
+      - name: Rename Resume PDF
+        run: cp main.pdf Pham_Huy_Thanh_Resume.pdf
 
-      - name: Upload artifact (PDF)
+      - name: Compile Cover Letter (XeLaTeX)
+        if: hashFiles('cover_letter.tex') != ''
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cover_letter.tex
+          latexmk_use_xelatex: true
+          latexmk_shell_escape: true
+          pre_compile: |
+            tlmgr update --self
+            tlmgr install fontawesome5 fontspec lm babel-english
+
+      - name: Rename Cover Letter PDF
+        if: hashFiles('cover_letter.tex') != ''
+        run: cp cover_letter.pdf Pham_Huy_Thanh_Cover_Letter.pdf
+
+      - name: List outputs
+        run: ls -la *.pdf
+
+      - name: Upload artifact (PDFs)
         uses: actions/upload-artifact@v4
         with:
-          name: resume-pdf
-          path: Pham_Huy_Thanh_Resume.pdf
+          name: resume-and-cover-letter
+          path: |
+            Pham_Huy_Thanh_Resume.pdf
+            Pham_Huy_Thanh_Cover_Letter.pdf
 
       - name: Upload logs (always)
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: resume-logs
+          name: build-logs
           path: |
             main.log
             main.aux
-            main.toc
-            main.lof
-            main.lot
+            cover_letter.log
+            cover_letter.aux
 
   release:
     if: github.event_name == 'push'
@@ -68,29 +85,24 @@ jobs:
         run: |
           set -euo pipefail
           
-          # Tìm tag/release gần nhất từ các build thành công (tag pattern: build-*)
           LAST_TAG=""
           BUILD_TAGS=$(git tag -l "build-*" 2>/dev/null || true)
           
           if [ -n "$BUILD_TAGS" ]; then
-            # Sắp xếp tags theo số và lấy tag lớn nhất (build gần nhất)
             LAST_TAG=$(echo "$BUILD_TAGS" | sed 's/build-//' | sort -n | tail -1 | sed 's/^/build-/')
             echo "Found last successful build tag: ${LAST_TAG}" >&2
           else
             echo "No build tags found, will include all commits" >&2
           fi
           
-          # Tạo file changelog với format đẹp giống GitHub Releases
           {
             echo "## Changelog ($(date -u +"%Y-%m-%d %H:%M:%S") UTC)"
             echo ""
             
-            # Chỉ lấy commit từ tag build gần nhất đến HEAD (nếu có tag build)
             if [ -n "$LAST_TAG" ]; then
               COMMIT_RANGE="${LAST_TAG}..HEAD"
               echo "Getting commits from ${LAST_TAG} to HEAD" >&2
               
-              # Kiểm tra xem có commit nào không
               COMMITS=$(git log "${COMMIT_RANGE}" --no-merges --oneline 2>/dev/null || true)
               if [ -n "$COMMITS" ]; then
                 git log "${COMMIT_RANGE}" --no-merges --pretty=format:"*   **%s** (%h)"
@@ -105,7 +117,6 @@ jobs:
             
           } > release_notes.md
           
-          # Fallback cuối cùng nếu file rỗng hoặc không có commit nào
           if [ ! -s release_notes.md ] || ! grep -q "^\*" release_notes.md; then
             {
               echo "## Changelog ($(date -u +"%Y-%m-%d %H:%M:%S") UTC)"
@@ -116,7 +127,6 @@ jobs:
             } > release_notes.md
           fi
           
-          # Hiển thị preview
           echo "=== Changelog Preview (first 30 lines) ==="
           head -30 release_notes.md
           echo ""
@@ -126,7 +136,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: resume-pdf
+          name: resume-and-cover-letter
           path: dist
       
       - name: Create GitHub Release
@@ -135,4 +145,6 @@ jobs:
           tag_name: build-${{ github.run_number }}
           name: Automated Build ${{ github.run_number }}
           body_path: release_notes.md
-          files: dist/Pham_Huy_Thanh_Resume.pdf
+          files: |
+            dist/Pham_Huy_Thanh_Resume.pdf
+            dist/Pham_Huy_Thanh_Cover_Letter.pdf
