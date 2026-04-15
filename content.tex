@@ -1,9 +1,8 @@
 \section{Introduction}
 \begin{onecolentry}
     \begin{highlights}
-        \item Solution Architect with end-to-end platform ownership
-        \item Single point of contact for infrastructure and platform design
-        \item Expertise: Backend (gRPC, DDD), Infrastructure (Proxmox, K8s, on-prem IDC), DevOps/CI-CD, SRE, Database, Storage, Security
+        \item System Engineer with hands-on experience in telecom infrastructure, on-prem IDC, and backend development
+        \item Expertise: Infrastructure (Proxmox, K8s, Telecom), Backend (Golang, gRPC, DDD), DevOps/CI-CD, SRE, Security
     \end{highlights}
 \end{onecolentry}
 
@@ -25,98 +24,70 @@
 \section{Experience}
 
 % --- MobiFone (Current) ---
-\begin{twocolentry}{\textit{Ho Chi Minh City}}
+\begin{twocolentry}{\textit{Apr 2025 -- Present}}
     \textbf{MobiFone Telecommunications Corporation} \\[4pt]
     \textit{System Engineer \& Software Developer}
 \end{twocolentry}
-\begin{twocolentry}{\textit{Apr 2025 -- Present}}
-    \textit{Infrastructure \& Software Division}
-\end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Telecom Infrastructure Management:} Administered and maintained core telecom infrastructure systems (servers, network equipment, virtualization platforms). Purpose: Ensure 99.9\% uptime for critical telecom services, manage capacity planning, and perform scheduled maintenance with zero customer impact.
-        \item \textbf{Smart OTP Platform:} Developed and maintained Smart OTP (One-Time Password) authentication system for mobile banking and digital services. Purpose: Provide secure two-factor authentication for millions of subscribers, ensuring compliance with security standards and reducing fraud incidents.
-        \item \textbf{Internal Software Development:} Built and maintained internal management applications and automation tools for operational workflows. Purpose: Streamline business processes, reduce manual operations by 60\%, and provide real-time reporting dashboards for management.
-        \item \textbf{System Administration:} Managed Linux/Windows server environments, database systems, and application deployments across production infrastructure. Purpose: Maintain system stability, perform capacity monitoring, and ensure rapid incident response with documented runbooks.
-        \item \textbf{Network \& Security Operations:} Configured and monitored network infrastructure (firewalls, VPN, load balancers) for telecom-grade services. Purpose: Protect critical telecom assets, enforce security policies, and maintain compliance with industry regulations.
+        \item Administered core telecom infrastructure (servers, network equipment, virtualization) ensuring high availability for critical services
+        \item Developed and maintained Smart OTP authentication system for mobile banking and digital services
+        \item Built internal management applications and automation tools to streamline operational workflows
+        \item Managed Linux/Windows server environments, database systems, and production deployments
+        \item Configured and monitored network infrastructure (firewalls, VPN, load balancers) for telecom-grade services
     \end{highlights}
 \end{onecolentry}
-\vspace{0.3 cm}
+\vspace{0.2 cm}
 
 % --- ActsOne ---
-\begin{twocolentry}{\textit{Ho Chi Minh City}} % Removed date range from here, will specify with roles
-    \textbf{ActsOne }
-\end{twocolentry}
-% Role 1
-\begin{twocolentry}{\textit{Mar 2025 -- Apr 2025}}
-    \textit{Solution Architect}
+\begin{twocolentry}{\textit{2024 -- Apr 2025}}
+    \textbf{ActsOne} \\[4pt]
+    \textit{Solution Architect / System Engineer}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Order Processing Platform:} Built comprehensive order processing system (Golang, gRPC, DDD) for supply chain domain. Purpose: Handle high-frequency orders from multiple e-commerce platforms (Shopee, Lazada, TikTok) with inventory versioning, automated retry mechanisms, and PDF invoice generation.
-        \item \textbf{On-Prem IDC Infrastructure:} Designed and operate complete infrastructure platform (Proxmox VE, Kubernetes, NAS storage, networking). Purpose: Provide scalable, cost-effective on-premises infrastructure with VM isolation, HA (failover), automated provisioning, and backup-based system restoration.
-        \item \textbf{Storage Tiering System:} Implemented hot/warm/cold archive storage strategy with NAS systems. Purpose: Optimize data lifecycle management, reduce storage costs by 40\%, and ensure efficient data access patterns.
-        \item \textbf{Database Replication Platform:} Configured MySQL/PostgreSQL replication (master-slave, multi-master). Purpose: Ensure high availability, data consistency, and zero-downtime database operations.
-        \item \textbf{Security Infrastructure:} Architected zero-trust security platform (Cloudflare ZeroTrust, secure tunnels, DDoS protection, WAF). Purpose: Protect company infrastructure and applications from threats while enabling secure remote access.
-        \item \textbf{SRE Platform:} Built comprehensive SRE infrastructure (monitoring, HA architecture with failover). Purpose: Achieve 99.9\% uptime SLA, automate incident response, and ensure system reliability.
-        \item \textbf{CI/CD Platform:} Developed automated deployment pipelines (GitHub Actions, Drone CI, Kubernetes). Purpose: Enable rapid, reliable software delivery with automated testing and deployment.
+        \item Built order processing platform (Golang, gRPC, DDD) integrating Shopee, Lazada, TikTok with inventory versioning and distributed locking
+        \item Designed and operated on-prem IDC infrastructure (Proxmox VE, Kubernetes, NAS storage, networking) with HA failover
+        \item Implemented hot/warm/cold storage tiering strategy with NAS systems for data lifecycle management
+        \item Configured MySQL/PostgreSQL replication (master-slave, multi-master) for high availability
+        \item Architected zero-trust security platform (Cloudflare ZeroTrust, secure tunnels, WAF, DDoS protection)
+        \item Built SRE monitoring infrastructure and CI/CD pipelines (GitHub Actions, Drone CI, Kubernetes)
+        \item Deployed k8s/k3s clusters via Ansible with Longhorn persistent storage
+        \item Set up company-wide secure network (DrayTek firewalls, Headscale VPN with Tailscale/WireGuard)
+        \item Implemented Authentik as centralized IdP (SSO, MFA, RBAC) for internal services
+        \item Developed Golang API system with Swagger/Scalar docs, Redis caching, and API gateway
     \end{highlights}
 \end{onecolentry}
-\vspace{0.15cm} % Add a small space before the next role
+\vspace{0.2 cm}
 
-% Role 2: Previous Role
-\begin{twocolentry}{\textit{2024 -- Mar 2025}}
-    \textit{System Engineer \& Backend Developer}
-\end{twocolentry}
-\begin{onecolentry}
-    \begin{highlights}
-        \item \textbf{Proxmox VE Infrastructure:} Built and managed Proxmox VE cluster with VM isolation, snapshots, HA (failover), Ansible automation. Purpose: Virtualize company infrastructure, enable rapid VM provisioning (80\% faster setup), and provide high-availability virtualization platform with automatic failover.
-        \item \textbf{Kubernetes Platform:} Automated deployment of k8s/k3s clusters (Ansible playbooks) with Longhorn persistent storage. Purpose: Enable container orchestration for microservices, manage stateful applications, and provide scalable container platform.
-        \item \textbf{Zero-Trust Network:} Architected company-wide secure network (DrayTek firewalls, Headscale VPN with Tailscale/WireGuard). Purpose: Establish unified zero-trust environment, secure remote access, and protect internal services.
-        \item \textbf{Identity Provider Platform:} Implemented Authentik as centralized IdP (RBAC, SSO, MFA). Purpose: Secure internal services, enforce role-based access control, and provide single sign-on experience.
-        \item \textbf{High-Frequency Order System:} Engineered order processing system (Golang cron, 5-min intervals) with API integrations (Shopee, Lazada, TikTok), Redis caching, webhook architecture, distributed locking. Purpose: Process orders in real-time, reduce API calls, and prevent duplicate processing.
-        \item \textbf{API Platform:} Developed Golang API system with Swagger/Scalar documentation and API gateway. Purpose: Provide clear, documented APIs with rate limiting (50 RPM/client), reduce platform API consumption by 85\%, achieve 15ms response time for cached requests.
-        \item \textbf{Performance Optimization:} Implemented Redis caching, load balancing, and monitoring systems. Purpose: Improve system throughput by 50\%, reduce response times, and optimize resource utilization.
-        \item \textbf{CI/CD Platform:} Built CI/CD pipelines (GitHub Actions, Drone CI) for automated K8s deployments. Purpose: Enable rapid, reliable software delivery with automated testing and infrastructure as code.
-        \item \textbf{Backup \& Restore System:} Established automated backup procedures and restoration capabilities for VMs, databases, and application data. Purpose: Enable system restoration from backups, ensure data protection, and support recovery operations.
-        \item \textbf{Security Platform:} Configured Cloudflare and NGINX for load balancing and security (DDoS protection, WAF). Purpose: Protect applications from attacks, distribute traffic, and block malicious requests.
-    \end{highlights}
-\end{onecolentry}
-\vspace{1 cm}
-
-
-% --- Kays.vn (Senior Developer, 2023) ---
-\begin{twocolentry}{\textit{Ho Chi Minh City, 2023}}
+% --- Kays.vn ---
+\begin{twocolentry}{\textit{2023}}
     \textbf{Kays.vn} \\[4pt]
     \textit{Full-stack Engineer}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Developed Tauri Dashboard for cross-platform for transactions with Rust-based security modules
+        \item Developed Tauri Dashboard for cross-platform transactions with Rust-based security modules
         \item Implemented Next.js for product pages, improving SEO ranking
         \item Orchestrated real-time data sync between Supabase and legacy systems using AWS EventBridge
-        \item Mentored 4 intern. developers in TypeScript best practices and performance optimization techniques
+        \item Mentored 4 intern developers in TypeScript best practices and performance optimization
     \end{highlights}
 \end{onecolentry}
-\vspace{1 cm}
+\vspace{0.2 cm}
 
-% --- IVS Internship (Website Developer, 2022) ---
-\begin{twocolentry}{\textit{Ho Chi Minh City, 2022}}
-    \textbf{IVS}\\[4pt]
+% --- IVS ---
+\begin{twocolentry}{\textit{2022}}
+    \textbf{IVS} \\[4pt]
     \textit{Website Developer}
 \end{twocolentry}
-\vspace{0.1 cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item Led development of new homepage website focusing on user experience improvements
-        \item Built dynamic frontend using Next.js/React.js with mobile-first responsive design
-        \item Collaborated with backend team to implement SpringBoot APIs for data integration
-        \item Optimized MongoDB/MySQL queries reducing page load times by 15%
-        \item Implemented SSR and lazy loading techniques for faster content delivery
+        \item Led homepage redesign using Next.js/React.js with mobile-first responsive design
+        \item Collaborated with backend team on SpringBoot API integration
+        \item Optimized MongoDB/MySQL queries and implemented SSR/lazy loading for faster delivery
         \item Established CI/CD pipeline using Jenkins for automated deployments
     \end{highlights}
 \end{onecolentry}
-
 
 
 \section{Technical Skills \& Interests}
@@ -124,17 +95,12 @@
 \begin{highlights}
     \item \textbf{Programming:} Go, C/C++, Python, JavaScript, Java, Rust
     \item \textbf{Backend:} gRPC, Domain-Driven Design (DDD), Microservices, API Gateway
-    \item \textbf{Infrastructure:} On-Prem IDC, Proxmox VE, Kubernetes (k8s/k3s), Colocation, Platform Engineering, Telecom Infrastructure
-    \item \textbf{Architecture:} End-to-End System Design, Scalable Platforms, Infrastructure as Code
-    \item \textbf{SRE:} Monitoring, High Availability, SLA Management
-    \item \textbf{Database:} MySQL/PostgreSQL (Replication, Master-Slave, Multi-Master), MongoDB, Redis, DuckDB
-    \item \textbf{Storage:} NAS, Hot/Warm/Cold Archive, Storage Tiering, Data Lifecycle Management
+    \item \textbf{Infrastructure:} On-Prem IDC, Proxmox VE, Kubernetes (k8s/k3s), Telecom Infrastructure
+    \item \textbf{Database:} MySQL/PostgreSQL (Replication, Master-Slave), MongoDB, Redis, DuckDB
     \item \textbf{Security:} Cloudflare ZeroTrust, Secure Tunnels, DrayTek Firewalls, Zero-Trust Architecture
     \item \textbf{Networking:} VLAN, Load Balancing, Network Segmentation, VPN (Tailscale/WireGuard)
     \item \textbf{DevOps:} Docker, Ansible, GitHub Actions, Drone CI, Nginx, CI/CD Pipelines
-    \item \textbf{Identity:} Authentik (SSO, MFA, RBAC)
-    \item \textbf{Web:} Next.js, React.js, SpringBoot, WordPress, Tauri, Electron
-    \item \textbf{APIs:} gRPC, REST, Swagger, Scalar
+    \item \textbf{Web:} Next.js, React.js, SpringBoot, Tauri, Electron
 \end{highlights}
 \end{onecolentry}
 
@@ -144,9 +110,7 @@
         \item \textbf{Best Solution Award} - ActsOne (2024)
         \item \textbf{Outstanding Employee} - Kays.vn (2023)
         \item \textbf{Most Promising Intern Award} - IVS Technology Solutions (2022)
-        \item Top 36 Presentation Contest - University Level (2019)
         \item Academic Excellence Scholarship - HCMUT (2019, 2022)
         \item Student Scholarship Project Award (Score: 9.30/10) - HCMUT (2022)
     \end{highlights}
 \end{onecolentry}
-
