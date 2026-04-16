@@ -28,6 +28,7 @@ jobs:
           latexmk_shell_escape: true
           extra_system_packages: |
           pre_compile: |
+            tlmgr option repository https://mirrors.rit.edu/CTAN/systems/texlive/tlnet
             tlmgr update --self
             tlmgr install fontawesome5 fontspec lm babel-english
 
@@ -42,6 +43,7 @@ jobs:
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
           pre_compile: |
+            tlmgr option repository https://mirrors.rit.edu/CTAN/systems/texlive/tlnet
             tlmgr update --self
             tlmgr install fontawesome5 fontspec lm babel-english
 
