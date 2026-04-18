@@ -23,7 +23,7 @@ jobs:
       - name: Compile Resume (XeLaTeX)
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: main.tex
+          root_file: "main.tex main_vi.tex"
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
           extra_system_packages: |
@@ -33,13 +33,15 @@ jobs:
             tlmgr install fontawesome5 fontspec lm babel-english
 
       - name: Rename Resume PDF
-        run: cp main.pdf Pham_Huy_Thanh_Resume.pdf
+        run: |
+          cp main.pdf Pham_Huy_Thanh_Resume.pdf
+          cp main_vi.pdf Pham_Huy_Thanh_Resume_VI.pdf
 
       - name: Compile Cover Letter (XeLaTeX)
         if: hashFiles('cover_letter.tex') != ''
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: cover_letter.tex
+          root_file: "cover_letter.tex cover_letter_vi.tex"
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
           pre_compile: |
@@ -49,7 +51,9 @@ jobs:
 
       - name: Rename Cover Letter PDF
         if: hashFiles('cover_letter.tex') != ''
-        run: cp cover_letter.pdf Pham_Huy_Thanh_Cover_Letter.pdf
+        run: |
+          cp cover_letter.pdf Pham_Huy_Thanh_Cover_Letter.pdf
+          cp cover_letter_vi.pdf Pham_Huy_Thanh_Cover_Letter_VI.pdf
 
       - name: List outputs
         run: ls -la *.pdf
@@ -60,7 +64,9 @@ jobs:
           name: resume-and-cover-letter
           path: |
             Pham_Huy_Thanh_Resume.pdf
+            Pham_Huy_Thanh_Resume_VI.pdf
             Pham_Huy_Thanh_Cover_Letter.pdf
+            Pham_Huy_Thanh_Cover_Letter_VI.pdf
 
       - name: Upload logs (always)
         if: always()
@@ -70,8 +76,12 @@ jobs:
           path: |
             main.log
             main.aux
+            main_vi.log
+            main_vi.aux
             cover_letter.log
             cover_letter.aux
+            cover_letter_vi.log
+            cover_letter_vi.aux
 
   release:
     if: github.event_name == 'push'
@@ -149,4 +159,6 @@ jobs:
           body_path: release_notes.md
           files: |
             dist/Pham_Huy_Thanh_Resume.pdf
+            dist/Pham_Huy_Thanh_Resume_VI.pdf
             dist/Pham_Huy_Thanh_Cover_Letter.pdf
+            dist/Pham_Huy_Thanh_Cover_Letter_VI.pdf
