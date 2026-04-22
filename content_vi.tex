@@ -27,91 +27,90 @@
 % --- MobiFone (Current) ---
 \begin{twocolentry}{\textit{Tháng 4 2025 -- Hiện tại}}
     \textbf{Tổng công ty Viễn thông MobiFone} \\[4pt]
-    \textit{Kỹ sư Hệ thống \& Lập trình viên}
+    \textit{Kỹ sư Hệ thống \& Lập trình viên Backend}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Phần mềm \& Dữ liệu}: Phát triển Core Microservices (\textbf{Golang}) cho hệ thống phân tích dữ liệu viễn thông quy mô lớn và duy trì hệ thống xác thực Smart OTP (Python)
-        \item \textbf{Hạ tầng \& Ảo hóa}: Quản trị cụm ảo hóa (VMware, Proxmox) có tính khả dụng cao (HA, DRS) trên nền tảng Server vật lý \& Lưu trữ (SAN/NAS); quản lý Active Directory (AD DS), DNS/DHCP
-        \item \textbf{Mạng \& Bảo mật}: Cấu hình định tuyến mạng (VLAN, Subnetting) và hệ thống an toàn thông tin (NGFW, WAF, VPN, Layer 7 Load Balancers)
-        \item \textbf{Giám sát \& Khôi phục (SRE)}: Triển khai giám sát tập trung (LibreNMS, Zabbix, Grafana) và quản trị chiến lược Disaster Recovery (Veeam, SRM) tuân thủ nghiêm ngặt RPO/RTO
-        \item \textbf{Tích hợp hệ thống}: Soạn thảo thiết kế kỹ thuật (HLD/LLD) và dẫn dắt toàn bộ vòng đời triển khai (Pilot, UAT) cho các dự án hạ tầng lớn
+        \item \textbf{Phần mềm \& Dữ liệu}: Phát triển Core Microservices bằng \textbf{Golang} cho luồng xử lý dữ liệu viễn thông quy mô lớn, tốc độ cao (high-throughput); duy trì \& tối ưu hệ thống xác thực Smart OTP bằng Python đảm bảo độ trễ thấp cho hàng triệu user.
+        \item \textbf{Hạ tầng \& K8s}: Quản trị cụm ảo hóa (VMware, Proxmox) có tính khả dụng cao (HA, DRS) trên Server vật lý \& SAN/NAS. Quản lý container workloads và triển khai dịch vụ trên Kubernetes clusters nhằm tự động hóa failover và scale.
+        \item \textbf{Mạng \& Bảo mật}: Cấu hình định tuyến mạng (VLAN, Subnetting), Active Directory (AD DS), DNS/DHCP và hệ thống an toàn thông tin (NGFW, WAF, VPN, Layer 7 Load Balancers).
+        \item \textbf{SRE \& Giám sát}: Triển khai giám sát tập trung (LibreNMS, Zabbix, Prometheus, Grafana) để tự động cảnh báo sự cố, giảm thiểu MTTR và đảm bảo SLA. Quản trị chiến lược Disaster Recovery (Veeam, SRM) tuân thủ RPO/RTO.
+        \item \textbf{CI/CD \& Tự động hóa}: Xây dựng các luồng triển khai tự động (CI/CD pipelines) và áp dụng tư duy Infrastructure as Code (IaC) với Ansible để đạt được zero-downtime deployments.
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
 
 % --- ActsOne ---
-\begin{twocolentry}{\textit{2024 -- Tháng 4 2025}}
+\begin{twocolentry}{\textit{Tháng 10 2023 -- Tháng 3 2025}}
     \textbf{ActsOne} \\[4pt]
-    \textit{Kiến trúc sư Giải pháp / Kỹ sư Hệ thống}
+    \textit{Kiến trúc sư Giải pháp \& Kỹ sư Hệ thống}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Xây dựng nền tảng xử lý đơn hàng (Golang, gRPC, DDD) tích hợp với Shopee, Lazada, TikTok, hỗ trợ quản lý phiên bản tồn kho và cơ chế khóa phân tán (distributed locking)
-        \item Thiết kế và vận hành hạ tầng IDC on-premise (Proxmox VE, Kubernetes, lưu trữ NAS, mạng LAN) với cơ chế failover HA
-        \item Triển khai chiến lược lưu trữ phân tầng hot/warm/cold tích hợp các hệ thống NAS cho vòng đời quản lý dữ liệu hiệu quả
-        \item Cấu hình cơ sở dữ liệu MySQL/PostgreSQL replication (master-slave, multi-master) đảm bảo tính sẵn sàng cao
-        \item Kiến trúc nền tảng bảo mật Zero-Trust (Cloudflare ZeroTrust, secure tunnels, WAF, phòng chống DDoS)
-        \item Xây dựng hạ tầng giám sát SRE và vòng đời CI/CD pipelines (GitHub Actions, Drone CI, Kubernetes)
-        \item Triển khai các cụm k8s/k3s tự động qua Ansible tích hợp lưu trữ bền vững (persistent storage) Longhorn
-        \item Thiết lập hệ thống mạng bảo mật định tuyến toàn công ty (DrayTek firewalls, mạng riêng ảo Headscale VPN kết hợp Tailscale/WireGuard)
-        \item Triển khai Authentik làm IdP trung tâm (SSO, MFA, RBAC) cho các dịch vụ nội bộ
-        \item Phát triển hệ thống API bằng Golang hỗ trợ Swagger/Scalar docs, Redis caching, và API gateway
+        \item \textbf{Nền tảng Xử lý Đơn hàng (Backend):} Xây dựng hệ thống backend (Golang, gRPC, DDD) tích hợp API Shopee, Lazada, TikTok với cơ chế cron/webhook, Redis caching và khóa phân tán (distributed locking) để xử lý lượng đơn hàng khổng lồ theo thời gian thực.
+        \item \textbf{Hạ tầng Ảo hóa IDC (System):} Thiết kế và vận hành toàn bộ hạ tầng on-premise với cụm Proxmox VE. Ứng dụng Ansible để tự động hóa cấp phát VM (nhanh hơn 80\%), thiết lập cô lập VM, snapshot và tự động failover (HA).
+        \item \textbf{Nền tảng Kubernetes \& Lưu trữ (DevOps/System):} Tự động hóa triển khai các cụm K8s/K3s bằng Ansible playbooks. Cấu hình lưu trữ bền vững (persistent storage) với Longhorn và chiến lược lưu trữ phân tầng (hot/warm/cold archive) trên NAS, giúp giảm 40\% chi phí lưu trữ.
+        \item \textbf{Cơ sở Dữ liệu \& SRE:} Thiết lập MySQL/PostgreSQL replication (master-slave, multi-master) và Redis caching, tăng 50\% thông lượng hệ thống. Xây dựng nền tảng SRE giám sát toàn diện, thiết lập sao lưu tự động (Backup \& Restore) cho VM/DB để đạt SLA 99.9\%.
+        \item \textbf{Mạng \& Bảo mật Zero-Trust:} Kiến trúc mạng an toàn toàn diện tích hợp DrayTek firewalls, Cloudflare ZeroTrust (WAF, chống DDoS), NGINX load balancer và mạng riêng ảo VPN (Headscale, Tailscale/WireGuard).
+        \item \textbf{Identity Provider \& API Gateway:} Triển khai Authentik làm IdP trung tâm (SSO, MFA, RBAC). Phát triển hệ thống API Gateway bằng Golang với rate limiting (50 RPM/client) và document Swagger/Scalar, giảm 85\% băng thông API rác.
+        \item \textbf{CI/CD Pipelines (DevOps):} Xây dựng hoàn chỉnh các luồng CI/CD (GitHub Actions, Drone CI) để tự động hóa quá trình kiểm thử, build và deploy microservices lên Kubernetes.
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
 
 % --- Kays.vn ---
-\begin{twocolentry}{\textit{2023}}
+\begin{twocolentry}{\textit{2023 (Làm việc từ xa)}}
     \textbf{Kays.vn} \\[4pt]
-    \textit{Lập trình viên Backend}
+    \textit{Kỹ sư Full-stack \& Backend}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Xây dựng các module backend đa nền tảng bằng Rust để xử lý giao dịch, có hỗ trợ mã hóa và bảo vệ bảo mật dữ liệu
-        \item Thiết kế và triển khai luồng dữ liệu (data pipeline) theo mô hình hướng sự kiện (event-driven) sử dụng AWS EventBridge để đồng bộ dữ liệu giữa Supabase và các hệ thống cốt lõi cũ
-        \item Thiết kế và phát triển kiến trúc RESTful APIs và dịch vụ backend bằng \textbf{Golang} cho phân hệ quản lý sản phẩm và xử lý đơn hàng
-        \item Đào tạo và hỗ trợ (mentoring) cho các lập trình viên mới về kiến trúc backend và tối ưu hiệu năng bằng \textbf{Golang} và Rust
+        \item Xây dựng các module backend đa nền tảng bằng \textbf{Rust} để xử lý giao dịch, hỗ trợ mã hóa bảo mật cao cấp (Tauri Dashboard).
+        \item Triển khai luồng dữ liệu (data pipeline) theo mô hình hướng sự kiện (event-driven) bằng AWS EventBridge để đồng bộ dữ liệu thời gian thực giữa Supabase và hệ thống cũ.
+        \item Thiết kế và phát triển RESTful APIs bằng \textbf{Golang} cho phân hệ sản phẩm và đơn hàng. Phát triển frontend bằng Next.js giúp tối ưu hóa SEO.
+        \item Đào tạo (mentor) 4 thực tập sinh về các best practice trong TypeScript, Golang và kỹ thuật tối ưu hóa hiệu năng.
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
 
 % --- IVS ---
-\begin{twocolentry}{\textit{2022}}
-    \textbf{IVS} \\[4pt]
-    \textit{Lập trình viên Backend}
+\begin{twocolentry}{\textit{Tháng 8 2022 -- Tháng 9 2023}}
+    \textbf{IVS Technology Solutions} \\[4pt]
+    \textit{Lập trình viên Web \& Backend}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Phát triển và bảo trì các RESTful APIs sử dụng SpringBoot (Java) cho các hệ thống module nghiệp vụ lõi
-        \item Tối ưu hóa truy vấn dữ liệu MongoDB/MySQL bằng các chiến lược đánh chỉ mục (indexing) và phân tích truy vấn, giảm đáng kể thời gian phản hồi (latency) của toàn hệ thống
-        \item Thiết kế schema cơ sở dữ liệu và triển khai tầng truy xuất dữ liệu tối ưu cho các luồng xử lý I/O với lưu lượng lớn
-        \item Xây dựng quy trình CI/CD bằng Jenkins cho mục đích tự động hóa việc kiểm thử và triển khai
+        \item Phát triển các RESTful APIs cốt lõi bằng SpringBoot (Java) và xây dựng giao diện động bằng Next.js/React.js (mobile-first design).
+        \item Tối ưu hóa truy vấn cơ sở dữ liệu MongoDB/MySQL thông qua indexing, giảm 15\% thời gian tải trang.
+        \item Ứng dụng kỹ thuật Server-Side Rendering (SSR) và lazy loading để phân phối nội dung tốc độ cao.
+        \item Xây dựng quy trình CI/CD bằng Jenkins để tự động hóa toàn bộ việc kiểm thử và triển khai (deployment).
     \end{highlights}
 \end{onecolentry}
-
 
 \section{Kỹ năng Công nghệ \& Lĩnh vực Chuyên môn}
 \begin{onecolentry}
 \begin{highlights}
-    \item \textbf{Lập trình:} Go, C/C++, Python, JavaScript, Java, Rust
-    \item \textbf{Backend:} gRPC, Domain-Driven Design (DDD), Microservices, API Gateway
-    \item \textbf{Hạ tầng (Infrastructure):} On-Prem IDC, Proxmox VE, Kubernetes (k8s/k3s), Thiết bị Viễn thông
-    \item \textbf{Cơ sở dữ liệu:} MySQL/PostgreSQL (Replication, Master-Slave), MongoDB, Redis, DuckDB
-    \item \textbf{Bảo mật:} Cloudflare ZeroTrust, Secure Tunnels, DrayTek Firewalls, Zero-Trust Architecture
-    \item \textbf{Mạng (Networking):} VLAN, Load Balancing, Phân vùng mạng (Network Segmentation), VPN (Tailscale/WireGuard)
-    \item \textbf{DevOps:} Docker, Ansible, GitHub Actions, Drone CI, Nginx, CI/CD Pipelines
-    \item \textbf{Web UI/Client:} Next.js, React.js, SpringBoot, Tauri, Electron
+    \item \textbf{Lập trình:} Go (Golang), C/C++, Python, JavaScript, Java, Rust
+    \item \textbf{Backend \& API:} gRPC, REST, Swagger, Scalar, Domain-Driven Design (DDD), Microservices, API Gateway
+    \item \textbf{Hạ tầng (System):} On-Prem IDC, Proxmox VE, Kubernetes (K8s/K3s), Colocation, Platform Engineering
+    \item \textbf{Kiến trúc \& SRE:} End-to-End System Design, HA Architecture, Monitoring, SLA Management
+    \item \textbf{Cơ sở dữ liệu:} MySQL/PostgreSQL (Replication, Master-Slave, Multi-Master), MongoDB, Redis, DuckDB
+    \item \textbf{Lưu trữ (Storage):} Hệ thống NAS, Hot/Warm/Cold Archive, Storage Tiering, Data Lifecycle Management
+    \item \textbf{Bảo mật \& Định danh:} Cloudflare ZeroTrust, WAF, Secure Tunnels, DrayTek Firewalls, Authentik (SSO, MFA, RBAC)
+    \item \textbf{Mạng (Networking):} VLAN, Load Balancing, Network Segmentation, VPN (Tailscale/WireGuard)
+    \item \textbf{DevOps \& CI/CD:} Docker, Ansible, GitHub Actions, Drone CI, Jenkins, Nginx, Infrastructure as Code (IaC)
+    \item \textbf{Web UI/Client:} Next.js, React.js, SpringBoot, WordPress, Tauri, Electron
 \end{highlights}
 \end{onecolentry}
 
 \section{Thành tựu \& Giải thưởng}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Best Solution Award} - ActsOne (2024)
-        \item \textbf{Outstanding Employee} - Kays.vn (2023)
-        \item \textbf{Most Promising Intern Award} - IVS Technology Solutions (2022)
-        \item Học bổng Khuyến khích Học tập - Đại học Bách Khoa TP.HCM (2019, 2022)
-        \item Giải thưởng Nghiên cứu \& Đề tài Khoa học Sinh viên (Điểm: 9.30/10) - Đại học Bách Khoa TP.HCM (2022)
+        \item \textbf{Giải pháp Tốt nhất (Best Solution Award)} - ActsOne (2024)
+        \item \textbf{Nhân viên Xuất sắc (Outstanding Employee)} - Kays.vn (2023)
+        \item \textbf{Thực tập sinh Triển vọng (Most Promising Intern Award)} - IVS Technology Solutions (2022)
+        \item \textbf{Top 36 Cuộc thi Thuyết trình} - Cấp Đại học (2019)
+        \item \textbf{Học bổng Khuyến khích Học tập} - Đại học Bách Khoa TP.HCM (2019, 2022)
+        \item \textbf{Giải thưởng Dự án Sinh viên (Điểm: 9.30/10)} - Đại học Bách Khoa TP.HCM (2022)
     \end{highlights}
 \end{onecolentry}
