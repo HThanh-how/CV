@@ -29,24 +29,49 @@
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Backend \& Microservices}: Engineered core backend microservices in \textbf{Golang} for large-scale telecom data analytics pipelines, and maintained Python-based Smart OTP authentication systems
-        \item \textbf{DevOps \& SRE}: Centralized system observability by integrating LibreNMS, Zabbix, and Grafana for real-time performance monitoring and automated SNMP-based alerting
-        \item \textbf{Cloud \& Automation}: Automated deployment workflows (CI/CD) and managed containerized workloads to optimize the software development lifecycle
+        \item \textbf{Telecom Data Analytics Platform:} Engineered core backend microservices in \textbf{Golang} to handle large-scale, high-throughput telecom data pipelines. Purpose: Process massive volumes of subscriber data in real-time, optimizing data aggregation and ensuring system stability under heavy loads.
+        \item \textbf{Authentication Infrastructure:} Maintained and scaled Python-based Smart OTP authentication systems. Purpose: Provide secure, highly available multi-factor authentication for enterprise telecom services with minimal latency.
+        \item \textbf{SRE \& Observability Architecture:} Centralized system observability by integrating LibreNMS, Zabbix, Prometheus, and Grafana. Purpose: Establish comprehensive real-time monitoring, implement automated SNMP-based alerting for network devices, and reduce Mean Time To Resolution (MTTR) for incidents.
+        \item \textbf{Container Orchestration \& K8s:} Managed containerized workloads using Docker and deployed highly-available services on Kubernetes clusters. Purpose: Ensure automated failover, dynamic scaling of telecom microservices, and optimal resource utilization.
+        \item \textbf{CI/CD \& Infrastructure Automation:} Architected automated CI/CD pipelines and utilized Infrastructure as Code (IaC) principles (Ansible). Purpose: Streamline the software development lifecycle, enforce automated testing, and enable consistent, zero-downtime deployments across environments.
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
 
 % --- ActsOne ---
-\begin{twocolentry}{\textit{2024 -- Apr 2025}}
+\begin{twocolentry}{\textit{Mar 2025 -- Present}}
     \textbf{ActsOne} \\[4pt]
-    \textit{Backend / DevOps Engineer}
+    \textit{Solution Architect}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Golang Backend}: Built order processing platform (Golang, gRPC, DDD) with distributed locking, handling high-throughput requests from Shopee, Lazada, and TikTok
-        \item \textbf{Kubernetes \& CI/CD}: Deployed automated K8s/K3s clusters via Ansible with Longhorn persistent storage; engineered complete CI/CD pipelines (GitHub Actions, Drone CI)
-        \item \textbf{Database HA}: Configured MySQL/PostgreSQL replication (master-slave) and Redis caching, ensuring ultra-low latency for API systems
-        \item \textbf{Security \& Gateway}: Implemented API Gateways, architected Cloudflare ZeroTrust infrastructure, and integrated Authentik as centralized IdP (SSO, MFA)
+        \item \textbf{Order Processing Platform:} Built comprehensive order processing system (Golang, gRPC, DDD) for supply chain domain. Purpose: Handle high-frequency orders from multiple e-commerce platforms (Shopee, Lazada, TikTok) with inventory versioning, automated retry mechanisms, and PDF invoice generation.
+        \item \textbf{On-Prem IDC Infrastructure:} Designed and operate complete infrastructure platform (Proxmox VE, Kubernetes, NAS storage, networking). Purpose: Provide scalable, cost-effective on-premises infrastructure with VM isolation, HA (failover), automated provisioning, and backup-based system restoration.
+        \item \textbf{Storage Tiering System:} Implemented hot/warm/cold archive storage strategy with NAS systems. Purpose: Optimize data lifecycle management, reduce storage costs by 40\%, and ensure efficient data access patterns.
+        \item \textbf{Database Replication Platform:} Configured MySQL/PostgreSQL replication (master-slave, multi-master). Purpose: Ensure high availability, data consistency, and zero-downtime database operations.
+        \item \textbf{Security Infrastructure:} Architected zero-trust security platform (Cloudflare ZeroTrust, secure tunnels, DDoS protection, WAF). Purpose: Protect company infrastructure and applications from threats while enabling secure remote access.
+        \item \textbf{SRE Platform:} Built comprehensive SRE infrastructure (monitoring, HA architecture with failover). Purpose: Achieve 99.9\% uptime SLA, automate incident response, and ensure system reliability.
+        \item \textbf{CI/CD Platform:} Developed automated deployment pipelines (GitHub Actions, Drone CI, Kubernetes). Purpose: Enable rapid, reliable software delivery with automated testing and deployment.
+    \end{highlights}
+\end{onecolentry}
+\vspace{0.2 cm}
+
+\begin{twocolentry}{\textit{2024 -- Mar 2025}}
+    \textbf{ActsOne} \\[4pt]
+    \textit{System Engineer \& Backend Developer}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{Proxmox VE Infrastructure:} Built and managed Proxmox VE cluster with VM isolation, snapshots, HA (failover), Ansible automation. Purpose: Virtualize company infrastructure, enable rapid VM provisioning (80\% faster setup), and provide high-availability virtualization platform with automatic failover.
+        \item \textbf{Kubernetes Platform:} Automated deployment of K8s/K3s clusters (Ansible playbooks) with Longhorn persistent storage. Purpose: Enable container orchestration for microservices, manage stateful applications, and provide scalable container platform.
+        \item \textbf{Zero-Trust Network:} Architected company-wide secure network (DrayTek firewalls, Headscale VPN with Tailscale/WireGuard). Purpose: Establish unified zero-trust environment, secure remote access, and protect internal services.
+        \item \textbf{Identity Provider Platform:} Implemented Authentik as centralized IdP (RBAC, SSO, MFA). Purpose: Secure internal services, enforce role-based access control, and provide single sign-on experience.
+        \item \textbf{High-Frequency Order System:} Engineered order processing system (Golang cron, 5-min intervals) with API integrations (Shopee, Lazada, TikTok), Redis caching, webhook architecture, distributed locking. Purpose: Process orders in real-time, reduce API calls, and prevent duplicate processing.
+        \item \textbf{API Platform:} Developed Golang API system with Swagger/Scalar documentation and API gateway. Purpose: Provide clear, documented APIs with rate limiting (50 RPM/client), reduce platform API consumption by 85\%, achieve 15ms response time for cached requests.
+        \item \textbf{Performance Optimization:} Implemented Redis caching, load balancing, and monitoring systems. Purpose: Improve system throughput by 50\%, reduce response times, and optimize resource utilization.
+        \item \textbf{CI/CD Platform:} Built CI/CD pipelines (GitHub Actions, Drone CI) for automated K8s deployments. Purpose: Enable rapid, reliable software delivery with automated testing and infrastructure as code.
+        \item \textbf{Backup \& Restore System:} Established automated backup procedures and restoration capabilities for VMs, databases, and application data. Purpose: Enable system restoration from backups, ensure data protection, and support recovery operations.
+        \item \textbf{Security Platform:} Configured Cloudflare and NGINX for load balancing and security (DDoS protection, WAF). Purpose: Protect applications from attacks, distribute traffic, and block malicious requests.
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
@@ -54,38 +79,50 @@
 % --- Kays.vn ---
 \begin{twocolentry}{\textit{2023}}
     \textbf{Kays.vn} \\[4pt]
-    \textit{Backend Engineer}
+    \textit{Full-stack Engineer}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item \textbf{Golang \& API}: Engineered robust RESTful APIs and backend microservices using \textbf{Golang} for product catalog and high-throughput order management
-        \item \textbf{Event-Driven}: Designed and implemented real-time event-driven data pipeline using AWS EventBridge for syncing between Supabase and legacy systems
-        \item \textbf{Cross-platform}: Built Rust-based backend modules for cross-platform transaction processing with advanced encryption
+        \item Developed Tauri Dashboard for cross-platform for transactions with Rust-based security modules
+        \item Implemented Next.js for product pages, improving SEO ranking
+        \item Orchestrated real-time data sync between Supabase and legacy systems using AWS EventBridge
+        \item Mentored 4 intern developers in TypeScript best practices and performance optimization techniques
     \end{highlights}
 \end{onecolentry}
 \vspace{0.2 cm}
 
 % --- IVS ---
 \begin{twocolentry}{\textit{2022}}
-    \textbf{IVS} \\[4pt]
-    \textit{Backend Developer}
+    \textbf{IVS Technology Solutions} \\[4pt]
+    \textit{Website Developer}
 \end{twocolentry}
 \begin{onecolentry}
     \begin{highlights}
-        \item Developed and maintained RESTful APIs using SpringBoot (Java) for core business modules
-        \item Optimized MongoDB/MySQL queries with advanced indexing strategies, significantly reducing system latency
-        \item Established CI/CD pipeline using Jenkins for automated testing and deployments
+        \item Led development of new homepage website focusing on user experience improvements
+        \item Built dynamic frontend using Next.js/React.js with mobile-first responsive design
+        \item Collaborated with backend team to implement SpringBoot APIs for data integration
+        \item Optimized MongoDB/MySQL queries reducing page load times by 15\%
+        \item Implemented SSR and lazy loading techniques for faster content delivery
+        \item Established CI/CD pipeline using Jenkins for automated deployments
     \end{highlights}
 \end{onecolentry}
 
-\section{Technical Skills}
+\section{Technical Skills \& Interests}
 \begin{onecolentry}
 \begin{highlights}
-    \item \textbf{Programming:} Go (Golang), Python, Rust, JavaScript, Java, C/C++
-    \item \textbf{Software Architecture:} Microservices, gRPC, Domain-Driven Design (DDD), Event-Driven
-    \item \textbf{DevOps \& Cloud:} Kubernetes (K8s/K3s), Docker, CI/CD (GitHub Actions, Drone, Jenkins), Ansible
-    \item \textbf{Databases:} MySQL/PostgreSQL, MongoDB, Redis, DuckDB
-    \item \textbf{Observability (SRE):} Prometheus, Grafana, Zabbix, LibreNMS
+    \item \textbf{Programming:} Go, C/C++, Python, JavaScript, Java, Rust
+    \item \textbf{Backend:} gRPC, Domain-Driven Design (DDD), Microservices, API Gateway
+    \item \textbf{Infrastructure:} On-Prem IDC, Proxmox VE, Kubernetes (K8s/K3s), Colocation, Platform Engineering
+    \item \textbf{Architecture:} End-to-End System Design, Scalable Platforms, Infrastructure as Code
+    \item \textbf{SRE:} Monitoring, High Availability, SLA Management
+    \item \textbf{Database:} MySQL/PostgreSQL (Replication, Master-Slave, Multi-Master), MongoDB, Redis, DuckDB
+    \item \textbf{Storage:} NAS, Hot/Warm/Cold Archive, Storage Tiering, Data Lifecycle Management
+    \item \textbf{Security:} Cloudflare ZeroTrust, Secure Tunnels, DrayTek Firewalls, Zero-Trust Architecture
+    \item \textbf{Networking:} VLAN, Load Balancing, Network Segmentation, VPN (Tailscale/WireGuard)
+    \item \textbf{DevOps:} Docker, Ansible, GitHub Actions, Drone CI, Nginx, CI/CD Pipelines
+    \item \textbf{Identity:} Authentik (SSO, MFA, RBAC)
+    \item \textbf{Web:} Next.js, React.js, SpringBoot, WordPress, Tauri, Electron
+    \item \textbf{APIs:} gRPC, REST, Swagger, Scalar
 \end{highlights}
 \end{onecolentry}
 
@@ -95,5 +132,8 @@
         \item \textbf{Best Solution Award} - ActsOne (2024)
         \item \textbf{Outstanding Employee} - Kays.vn (2023)
         \item \textbf{Most Promising Intern Award} - IVS Technology Solutions (2022)
+        \item \textbf{Top 36 Presentation Contest} - University Level (2019)
+        \item \textbf{Academic Excellence Scholarship} - HCMUT (2019, 2022)
+        \item \textbf{Student Scholarship Project Award (Score: 9.30/10)} - HCMUT (2022)
     \end{highlights}
 \end{onecolentry}
