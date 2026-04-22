@@ -23,7 +23,7 @@ jobs:
       - name: Compile Resume (XeLaTeX)
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: "main.tex main_vi.tex"
+          root_file: "main.tex main_vi.tex MBF_main_vi.tex"
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
           extra_system_packages: |
@@ -36,6 +36,7 @@ jobs:
         run: |
           cp main.pdf Pham_Huy_Thanh_Resume.pdf
           cp main_vi.pdf Pham_Huy_Thanh_Resume_VI.pdf
+          cp MBF_main_vi.pdf MBF_Pham_Huy_Thanh_Resume_VI.pdf
 
       - name: Compile Cover Letter (XeLaTeX)
         if: hashFiles('cover_letter.tex') != ''
@@ -65,6 +66,7 @@ jobs:
           path: |
             Pham_Huy_Thanh_Resume.pdf
             Pham_Huy_Thanh_Resume_VI.pdf
+            MBF_Pham_Huy_Thanh_Resume_VI.pdf
             Pham_Huy_Thanh_Cover_Letter.pdf
             Pham_Huy_Thanh_Cover_Letter_VI.pdf
 
@@ -78,6 +80,8 @@ jobs:
             main.aux
             main_vi.log
             main_vi.aux
+            MBF_main_vi.log
+            MBF_main_vi.aux
             cover_letter.log
             cover_letter.aux
             cover_letter_vi.log
@@ -160,5 +164,6 @@ jobs:
           files: |
             dist/Pham_Huy_Thanh_Resume.pdf
             dist/Pham_Huy_Thanh_Resume_VI.pdf
+            dist/MBF_Pham_Huy_Thanh_Resume_VI.pdf
             dist/Pham_Huy_Thanh_Cover_Letter.pdf
             dist/Pham_Huy_Thanh_Cover_Letter_VI.pdf
