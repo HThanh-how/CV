@@ -23,7 +23,7 @@ jobs:
       - name: Compile Resume (XeLaTeX)
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: "main.tex main_vi.tex MBF_main_vi.tex go_devops_main_vi.tex system_main_vi.tex"
+          root_file: "main.tex main_vi.tex MBF_main_vi.tex go_devops_main.tex system_main.tex"
           latexmk_use_xelatex: true
           latexmk_shell_escape: true
           extra_system_packages: |
@@ -37,8 +37,8 @@ jobs:
           cp main.pdf Pham_Huy_Thanh_Resume.pdf
           cp main_vi.pdf Pham_Huy_Thanh_Resume_VI.pdf
           cp MBF_main_vi.pdf Pham_Huy_Thanh_Digital_Specialist_VI.pdf
-          cp go_devops_main_vi.pdf Pham_Huy_Thanh_Backend_DevOps_VI.pdf
-          cp system_main_vi.pdf Pham_Huy_Thanh_System_Engineer_VI.pdf
+          cp go_devops_main.pdf Pham_Huy_Thanh_Backend_DevOps.pdf
+          cp system_main.pdf Pham_Huy_Thanh_System_Engineer.pdf
 
       - name: Compile Cover Letter (XeLaTeX)
         if: hashFiles('cover_letter.tex') != ''
@@ -69,8 +69,8 @@ jobs:
             Pham_Huy_Thanh_Resume.pdf
             Pham_Huy_Thanh_Resume_VI.pdf
             Pham_Huy_Thanh_Digital_Specialist_VI.pdf
-            Pham_Huy_Thanh_Backend_DevOps_VI.pdf
-            Pham_Huy_Thanh_System_Engineer_VI.pdf
+            Pham_Huy_Thanh_Backend_DevOps.pdf
+            Pham_Huy_Thanh_System_Engineer.pdf
             Pham_Huy_Thanh_Cover_Letter.pdf
             Pham_Huy_Thanh_Cover_Letter_VI.pdf
 
@@ -86,10 +86,10 @@ jobs:
             main_vi.aux
             MBF_main_vi.log
             MBF_main_vi.aux
-            go_devops_main_vi.log
-            go_devops_main_vi.aux
-            system_main_vi.log
-            system_main_vi.aux
+            go_devops_main.log
+            go_devops_main.aux
+            system_main.log
+            system_main.aux
             cover_letter.log
             cover_letter.aux
             cover_letter_vi.log
@@ -173,7 +173,7 @@ jobs:
             dist/Pham_Huy_Thanh_Resume.pdf
             dist/Pham_Huy_Thanh_Resume_VI.pdf
             dist/Pham_Huy_Thanh_Digital_Specialist_VI.pdf
-            dist/Pham_Huy_Thanh_Backend_DevOps_VI.pdf
-            dist/Pham_Huy_Thanh_System_Engineer_VI.pdf
+            dist/Pham_Huy_Thanh_Backend_DevOps.pdf
+            dist/Pham_Huy_Thanh_System_Engineer.pdf
             dist/Pham_Huy_Thanh_Cover_Letter.pdf
             dist/Pham_Huy_Thanh_Cover_Letter_VI.pdf
